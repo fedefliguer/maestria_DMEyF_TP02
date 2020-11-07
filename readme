@@ -1,3 +1,5 @@
+
+'''r
 library(data.table)
 library(ggplot2)
 library(devtools)
@@ -24,3 +26,4 @@ ds[ , clase_ternaria :=  NULL  ]
 
 source_url("https://raw.githubusercontent.com/fedefliguer/maestria_DMEyF_TP02/main/fe_tester.R")
 fe_tester(ds, "baseline")
+'''
