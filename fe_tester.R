@@ -10,8 +10,8 @@ fe_tester = function(dataset, transformations){
   )
   
   ds_3 = dataset[ foto_mes>=201910 & foto_mes<=201912 , ]
-  ds_6 = dataset[ foto_mes>=201907 & foto_mes<=201912 , ]
-  periods <- list(ds_3, ds_6)
+  ds_12 = dataset[ foto_mes>=201901 & foto_mes<=201912 , ]
+  periods <- list(ds_3, ds_12)
   
   val = dataset[ foto_mes>=202001 & foto_mes<=202002 , ]
   
@@ -40,7 +40,7 @@ fe_tester = function(dataset, transformations){
         p = "3m"
       }
       else if (j==2){
-        p = "6m"
+        p = "12m"
       }  
       
       assign(paste("m_", p, "_", i, sep=""), modelo, envir = .GlobalEnv)
@@ -62,5 +62,5 @@ fe_tester = function(dataset, transformations){
       assign("results", results, envir = .GlobalEnv)
     }
   }
-  remove(dgeneracion, modelo, result, val_p, val_202001_g, val_202001_p, val_202002_g, val_202002_p, periods, parameters, p, par_1, par_2, ds_6, ds_3, val, val_202001, val_202002, val_pr, AUC, campos_buenos, i, j)
+  remove(dgeneracion, modelo, result, val_p, val_202001_g, val_202001_p, val_202002_g, val_202002_p, periods, parameters, p, par_1, par_2, ds_12, ds_3, val, val_202001, val_202002, val_pr, AUC, campos_buenos, i, j)
 }
