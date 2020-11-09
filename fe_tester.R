@@ -6,7 +6,8 @@ fe_tester = function(dataset, transformations){
                         parameters=numeric(),
                         gan_202001=numeric(),
                         gan_202002=numeric(),
-                        auc=numeric()
+                        auc=numeric(),
+                        ks=numeric()
   )
   
   ds_3 = dataset[ foto_mes>=201910 & foto_mes<=201912 , ]
@@ -49,6 +50,10 @@ fe_tester = function(dataset, transformations){
       val_pr  <- prediction( val_p, val$clase01)
       AUC  <- performance( val_pr,"auc")@y.values[[1]]
       
+      perf <- performance(val_pr, "tpr", "fpr")
+      ks <- max(attr(perf, "y.values")[[1]] - (attr(perf, "x.values")[[1]]))
+
+      
       val_202001 = val[foto_mes==202001, ]
       val_202001_p  <- predict(modelo, data.matrix( val_202001[, campos_buenos, with=FALSE ]))
       val_202001_g  <- sum((val_202001_p > 0.025) * val_202001[, ifelse( clase01==1,29250,-750)])
@@ -57,7 +62,7 @@ fe_tester = function(dataset, transformations){
       val_202002_p  <- predict(modelo, data.matrix( val_202002[, campos_buenos, with=FALSE ]))
       val_202002_g  <- sum((val_202002_p > 0.025) * val_202002[, ifelse( clase01==1,29250,-750)])
       
-      result = list(transformations, p, i, val_202001_g, val_202002_g, AUC)
+      result = list(transformations, p, i, val_202001_g, val_202002_g, AUC, ks)
       results = rbind(results, result)
       assign("results", results, envir = .GlobalEnv)
     }
