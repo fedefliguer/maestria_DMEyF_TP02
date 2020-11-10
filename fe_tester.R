@@ -70,7 +70,7 @@ fe_tester = function(dataset, transformations){
   
   dir = paste0("models/", transformations, sep="")
   if (!file.exists(dir)) {
-  dir.create(subDir)
+  dir.create(dir)
   setwd(dir)
   lgb.save(m_12m_1, "m_12m_1.txt")
   lgb.save(m_12m_2, "m_12m_2.txt")
