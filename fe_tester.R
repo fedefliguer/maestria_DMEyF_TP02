@@ -67,22 +67,6 @@ fe_tester = function(dataset, transformations){
       assign("results", results, envir = .GlobalEnv)
     }
   }
-  
-  dir = paste0(getwd(), "/models/", transformations, sep="")
-  if (!file.exists(dir)) {
-  dir.create(dir)
-  setwd(dir)
-  lgb.save(m_12m_1, "m_12m_1.txt")
-  lgb.save(m_12m_2, "m_12m_2.txt")
-  lgb.save(m_3m_1, "m_3m_1.txt")
-  lgb.save(m_3m_2, "m_3m_2.txt")
-} else {
-  setwd(dir)
-  lgb.save(m_12m_1, "m_12m_1.txt")
-  lgb.save(m_12m_2, "m_12m_2.txt")
-  lgb.save(m_3m_1, "m_3m_1.txt")
-  lgb.save(m_3m_2, "m_3m_2.txt")
-}
-  
+   
   remove(dgeneracion, modelo, result, val_p, val_202001_g, val_202001_p, val_202002_g, val_202002_p, periods, parameters, p, par_1, par_2, ds_12, ds_3, val, val_202001, val_202002, val_pr, AUC, campos_buenos, i, j)
 }
