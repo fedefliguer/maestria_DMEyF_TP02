@@ -68,7 +68,7 @@ fe_tester = function(dataset, transformations){
     }
   }
   
-  dir = paste0("models/", transformations, sep="")
+  dir = paste0(getwd(), "/models/", transformations, sep="")
   if (!file.exists(dir)) {
   dir.create(dir)
   setwd(dir)
