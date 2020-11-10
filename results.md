@@ -47,5 +47,41 @@
    <td style="text-align:right;"> 0.9504831 </td>
    <td style="text-align:right;"> 0.7812051 </td>
   </tr>
+  <tr>
+   <td style="text-align:left;"> _correcciones </td>
+   <td style="text-align:left;"> 3m </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 10620000 </td>
+   <td style="text-align:right;"> 6750750 </td>
+   <td style="text-align:right;"> 0.9463774 </td>
+   <td style="text-align:right;"> 0.7655640 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> _correcciones </td>
+   <td style="text-align:left;"> 12m </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 11062500 </td>
+   <td style="text-align:right;"> 6908250 </td>
+   <td style="text-align:right;"> 0.9505114 </td>
+   <td style="text-align:right;"> 0.7788874 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> _correcciones </td>
+   <td style="text-align:left;"> 3m </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 10421250 </td>
+   <td style="text-align:right;"> 6806250 </td>
+   <td style="text-align:right;"> 0.9462242 </td>
+   <td style="text-align:right;"> 0.7642716 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> _correcciones </td>
+   <td style="text-align:left;"> 12m </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 11178000 </td>
+   <td style="text-align:right;"> 6701250 </td>
+   <td style="text-align:right;"> 0.9504307 </td>
+   <td style="text-align:right;"> 0.7762005 </td>
+  </tr>
 </tbody>
 </table>
