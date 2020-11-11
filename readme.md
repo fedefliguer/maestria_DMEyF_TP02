@@ -56,7 +56,7 @@ ds[ , clase_ternaria :=  NULL  ]
 
 # FE
 # Corrección de columnas que a priori son malas
-source_url("https://raw.githubusercontent.com/fedefliguer/maestria_DMEyF_TP01/main/scripts/nuevas_columnas.R")
+source_url("https://raw.githubusercontent.com/fedefliguer/maestria_DMEyF_TP02/main/scripts/correcciones.R")
 correcciones(ds)
 
 source_url("https://raw.githubusercontent.com/fedefliguer/maestria_DMEyF_TP02/main/fe_tester.R")
