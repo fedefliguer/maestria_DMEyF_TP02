@@ -62,6 +62,6 @@ correcciones(ds)
 source_url("https://raw.githubusercontent.com/fedefliguer/maestria_DMEyF_TP02/main/fe_tester.R")
 fe_tester(ds, "_correcciones")
 
-# CONVIERTO A RESULTADOS PARA AGREGAR AL MD
+# CONVIERTO A RESULTADOS PARA AGREGAR AL RESULTS.MD
 kable(results, format = "html")
 ```
