@@ -24,13 +24,13 @@ ds[ , clase_ternaria :=  NULL  ]
 
 #setwd(  "~/buckets/b1/tp2-working/" )
 
-# FE
-# Corrección de columnas que a priori son malas
-source_url("https://raw.githubusercontent.com/fedefliguer/maestria_DMEyF_TP02/main/scripts/correcciones.R")
-correcciones(ds)
+# FEATURE ENGINEERING
 
-source_url("https://raw.githubusercontent.com/fedefliguer/maestria_DMEyF_TP02/main/fe_tester.R")
-fe_tester(ds, "_correcciones")
+# Ensayo 1: Corrección de columnas que a priori son malas
+# source_url("https://raw.githubusercontent.com/fedefliguer/maestria_DMEyF_TP02/main/scripts/correcciones.R")
+# correcciones(ds)
+# source_url("https://raw.githubusercontent.com/fedefliguer/maestria_DMEyF_TP02/main/fe_tester.R")
+# fe_tester(ds, "_correcciones") # POCO INCREMENTO
 
 # CONVIERTO A RESULTADOS PARA AGREGAR AL RESULTS.MD
 kable(results, format = "html")
