@@ -272,5 +272,4 @@
 </tbody>
 </table>
 
-* Aunque sube el AUC, baja la ganancia para los dos períodos y el KS.
-* Probamos experimentar distintos puntos de corte? O las descartamos?
+* Bajan todas las ganancias, aunque dos veces sube el AUC.
