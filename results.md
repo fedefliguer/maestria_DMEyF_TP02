@@ -123,4 +123,7 @@
 </tbody>
 </table>
 
-El KS no aporta demasiado, se puede ganar en KS y perder en otras cosas. Las nuevas columnas ayudan en las ganancias más bajas de febrero, menos en las más altas de enero donde ayudaban un poco las correcciones. Vemos qué pasa con las dos cosas juntas.
+* Las nuevas variables ayudan. Incluso en gain llegan a quedar primeras (vl_egreso_principal) y terceras (vl_egresos). Otras importantes: fl_fidelizacion_media, vl_adeuda, vl_prestamos_totales, rt_invierte_adeuda, pc_comisiones_limite, nu_prestamos_totales, fl_egreso_principal_tc_visa
+* El KS no aporta demasiado, se puede ganar en KS y perder en ganancia.
+* Las nuevas columnas ayudan en las ganancias más bajas de febrero, menos en las más altas de enero donde ayudaban un poco las correcciones. Por eso vemos qué pasa con las dos cosas juntas:
+
