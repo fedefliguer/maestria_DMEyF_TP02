@@ -103,7 +103,25 @@
    <td style="text-align:right;"> 0.9504307 </td>
    <td style="text-align:right;"> 0.7762005 </td>
   </tr>
- <tbody>
+  </tbody>
+</table>
+
+* Pareciera que las correcciones no hacen ganar tanto.
+* Pruebo las nuevas columnas mias
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> dataset </th>
+   <th style="text-align:left;"> periods </th>
+   <th style="text-align:right;"> parameters </th>
+   <th style="text-align:right;"> gan_202001 </th>
+   <th style="text-align:right;"> gan_202002 </th>
+   <th style="text-align:right;"> auc </th>
+   <th style="text-align:right;"> ks </th>
+  </tr>
+ </thead>
+<tbody>
   <tr>
    <td style="text-align:left;"> _nuevas_columnas_fede </td>
    <td style="text-align:left;"> 3m </td>
