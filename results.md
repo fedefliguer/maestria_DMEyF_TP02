@@ -123,3 +123,4 @@
 </tbody>
 </table>
 
+El KS no aporta demasiado, se puede ganar en KS y perder en otras cosas. Las nuevas columnas ayudan en las ganancias más bajas de febrero, menos en las más altas de enero donde ayudaban un poco las correcciones. Vemos qué pasa con las dos cosas juntas.
