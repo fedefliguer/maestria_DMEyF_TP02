@@ -52,5 +52,8 @@ nuevas_columnas_fede = function(dataset){
   dataset[,fl_egreso_principal_tc_visa := ifelse(mtarjeta_visa_consumo > pmax(mautoservicio, mpagodeservicios, mforex_buy, mtransferencias_emitidas, mextraccion_autoservicio, mtarjeta_master_consumo, na.rm = TRUE), 1, 0)]
   dataset[,fl_egreso_principal_tc_master := ifelse(mtarjeta_master_consumo > pmax(mautoservicio, mpagodeservicios, mforex_buy, mtransferencias_emitidas, mextraccion_autoservicio, fl_egreso_principal_tc_visa, na.rm = TRUE), 1, 0)]
 
+  nuevo_orden <-  c( setdiff( colnames( dataset ) , "clase01" ) , "clase01" )
+  setcolorder( dataset, nuevo_orden )
+
 }
 
