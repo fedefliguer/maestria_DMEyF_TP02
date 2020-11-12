@@ -273,3 +273,4 @@
 </table>
 
 * Bajan todas las ganancias, aunque dos veces sube el AUC.
+* Las mejores son mv_status01, mv_mpagospesos, mv_Finiciomora, mv_status05, mvr_mpagominimo
