@@ -219,3 +219,55 @@
 
 * Le gana en AUC a todos, así que quedan.
 * Pruebo las nuevas columnas que armó Denicolay.
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> dataset </th>
+   <th style="text-align:left;"> periods </th>
+   <th style="text-align:right;"> parameters </th>
+   <th style="text-align:right;"> gan_202001 </th>
+   <th style="text-align:right;"> gan_202002 </th>
+   <th style="text-align:right;"> auc </th>
+   <th style="text-align:right;"> ks </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> _correcciones_nuevas_columnas_fede </td>
+   <td style="text-align:left;"> 3m </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 10559250 </td>
+   <td style="text-align:right;"> 6757500 </td>
+   <td style="text-align:right;"> 0.9468441 </td>
+   <td style="text-align:right;"> 0.7589652 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> _correcciones_nuevas_columnas_fede </td>
+   <td style="text-align:left;"> 12m </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 11013750 </td>
+   <td style="text-align:right;"> 6888000 </td>
+   <td style="text-align:right;"> 0.9506158 </td>
+   <td style="text-align:right;"> 0.7766971 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> _correcciones_nuevas_columnas_fede </td>
+   <td style="text-align:left;"> 3m </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 10537500 </td>
+   <td style="text-align:right;"> 6873000 </td>
+   <td style="text-align:right;"> 0.9469629 </td>
+   <td style="text-align:right;"> 0.7586731 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> _correcciones_nuevas_columnas_fede </td>
+   <td style="text-align:left;"> 12m </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 11000250 </td>
+   <td style="text-align:right;"> 6939000 </td>
+   <td style="text-align:right;"> 0.9509203 </td>
+   <td style="text-align:right;"> 0.7753216 </td>
+  </tr>
+</tbody>
+</table>
