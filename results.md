@@ -179,4 +179,4 @@
 </tbody>
 </table>
 
-* Le gana en AUC a todos, así que queda.
+* Le gana en AUC a todos, así que queda como v1.
