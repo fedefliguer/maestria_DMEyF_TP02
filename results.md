@@ -1,3 +1,5 @@
+* Baseline con todo tal cual está
+
 <table>
  <thead>
   <tr>
@@ -47,6 +49,24 @@
    <td style="text-align:right;"> 0.9504831 </td>
    <td style="text-align:right;"> 0.7812051 </td>
   </tr>
+ </tbody>
+</table>
+
+* Pruebo agregarle las correcciones a la base del dropbox
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> dataset </th>
+   <th style="text-align:left;"> periods </th>
+   <th style="text-align:right;"> parameters </th>
+   <th style="text-align:right;"> gan_202001 </th>
+   <th style="text-align:right;"> gan_202002 </th>
+   <th style="text-align:right;"> auc </th>
+   <th style="text-align:right;"> ks </th>
+  </tr>
+ </thead>
+<tbody>
   <tr>
    <td style="text-align:left;"> _correcciones </td>
    <td style="text-align:left;"> 3m </td>
@@ -179,4 +199,5 @@
 </tbody>
 </table>
 
-* Le gana en AUC a todos, así que queda como v1.
+* Le gana en AUC a todos, así que quedan.
+* Pruebo las nuevas columnas que armó Denicolay.
