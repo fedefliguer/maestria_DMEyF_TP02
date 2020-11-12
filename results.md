@@ -127,3 +127,55 @@
 * El KS no aporta demasiado, se puede ganar en KS y perder en ganancia.
 * Las nuevas columnas ayudan en las ganancias más bajas de febrero, menos en las más altas de enero donde ayudaban un poco las correcciones. Por eso vemos qué pasa con las dos cosas juntas:
 
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> dataset </th>
+   <th style="text-align:left;"> periods </th>
+   <th style="text-align:right;"> parameters </th>
+   <th style="text-align:right;"> gan_202001 </th>
+   <th style="text-align:right;"> gan_202002 </th>
+   <th style="text-align:right;"> auc </th>
+   <th style="text-align:right;"> ks </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> _correcciones_nuevas_columnas_fede </td>
+   <td style="text-align:left;"> 3m </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 10670250 </td>
+   <td style="text-align:right;"> 6806250 </td>
+   <td style="text-align:right;"> 0.9469378 </td>
+   <td style="text-align:right;"> 0.7637806 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> _correcciones_nuevas_columnas_fede </td>
+   <td style="text-align:left;"> 12m </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 11236500 </td>
+   <td style="text-align:right;"> 7033500 </td>
+   <td style="text-align:right;"> 0.9508499 </td>
+   <td style="text-align:right;"> 0.7773254 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> _correcciones_nuevas_columnas_fede </td>
+   <td style="text-align:left;"> 3m </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 10712250 </td>
+   <td style="text-align:right;"> 6965250 </td>
+   <td style="text-align:right;"> 0.9465691 </td>
+   <td style="text-align:right;"> 0.7644295 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> _correcciones_nuevas_columnas_fede </td>
+   <td style="text-align:left;"> 12m </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 11062500 </td>
+   <td style="text-align:right;"> 7018500 </td>
+   <td style="text-align:right;"> 0.9506184 </td>
+   <td style="text-align:right;"> 0.7790350 </td>
+  </tr>
+</tbody>
+</table>
+
