@@ -83,5 +83,42 @@
    <td style="text-align:right;"> 0.9504307 </td>
    <td style="text-align:right;"> 0.7762005 </td>
   </tr>
+ <tbody>
+  <tr>
+   <td style="text-align:left;"> _nuevas_columnas_fede </td>
+   <td style="text-align:left;"> 3m </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 10759500 </td>
+   <td style="text-align:right;"> 6951000 </td>
+   <td style="text-align:right;"> 0.9463858 </td>
+   <td style="text-align:right;"> 0.7589984 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> _nuevas_columnas_fede </td>
+   <td style="text-align:left;"> 12m </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 11304000 </td>
+   <td style="text-align:right;"> 6968250 </td>
+   <td style="text-align:right;"> 0.9504804 </td>
+   <td style="text-align:right;"> 0.7778025 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> _nuevas_columnas_fede </td>
+   <td style="text-align:left;"> 3m </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 10647000 </td>
+   <td style="text-align:right;"> 6848250 </td>
+   <td style="text-align:right;"> 0.9455294 </td>
+   <td style="text-align:right;"> 0.7617453 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> _nuevas_columnas_fede </td>
+   <td style="text-align:left;"> 12m </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 11001000 </td>
+   <td style="text-align:right;"> 6943500 </td>
+   <td style="text-align:right;"> 0.9502937 </td>
+   <td style="text-align:right;"> 0.7785212 </td>
+  </tr>
 </tbody>
 </table>
