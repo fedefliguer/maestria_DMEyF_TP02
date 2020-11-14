@@ -331,3 +331,5 @@
   </tr>
  </tbody>
 </table>
+
+* Las modificaciones bajan el score para cualquier punto de corte.
