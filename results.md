@@ -287,46 +287,46 @@
 <tbody>
    <tr>
    <th style="text-align:left;"> 0.17 </th>
-   <th style="text-align:left;">  </th>
+   <th style="text-align:left;"> 12.13 </th>
    <th style="text-align:right;"> 11.80 </th>
   </tr>
    <tr>
    <th style="text-align:left;"> 0.18 </th>
-   <th style="text-align:left;">  </th>
+   <th style="text-align:left;"> 12.31 </th>
    <th style="text-align:right;"> 12.22 </th>
   </tr>
    <tr>
    <th style="text-align:left;"> 0.19 </th>
-   <th style="text-align:left;">  </th>
+   <th style="text-align:left;"> 12.55 </th>
    <th style="text-align:right;"> 12.47 </th>
   <tr>
    <th style="text-align:left;"> 0.20 </th>
-   <th style="text-align:left;">  </th>
+   <th style="text-align:left;"> 12.34 </th>
    <th style="text-align:right;"> 12.15 </th>
   </tr>
   <tr>
    <th style="text-align:left;"> 0.21 </th>
-   <th style="text-align:left;">  </th>
+   <th style="text-align:left;"> 12.21 </th>
    <th style="text-align:right;"> 11.85 </th>
   </tr>
    <tr>
    <th style="text-align:left;"> 0.22 </th>
-   <th style="text-align:left;">  </th>
+   <th style="text-align:left;"> 12.36 </th>
    <th style="text-align:right;"> 11.67 </th>
   </tr>
    <tr>
    <th style="text-align:left;"> 0.23 </th>
-   <th style="text-align:left;">  </th>
+   <th style="text-align:left;"> 12.21 </th>
    <th style="text-align:right;"> 11.77 </th>
   </tr>
    <tr>
    <th style="text-align:left;"> 0.24 </th>
-   <th style="text-align:left;">  </th>
+   <th style="text-align:left;"> 12.09 </th>
    <th style="text-align:right;"> 11.64 </th>
   </tr>
    <tr>
    <th style="text-align:left;"> 0.25 </th>
-   <th style="text-align:left;">  </th>
+   <th style="text-align:left;"> 11.70 </th>
    <th style="text-align:right;"> 11.39 </th>
   </tr>
  </tbody>
