@@ -285,6 +285,20 @@
   </tr>
  </thead>
 <tbody>
+   <tr>
+   <th style="text-align:left;"> 0.17 </th>
+   <th style="text-align:left;">  </th>
+   <th style="text-align:right;">  </th>
+  </tr>
+   <tr>
+   <th style="text-align:left;"> 0.18 </th>
+   <th style="text-align:left;">  </th>
+   <th style="text-align:right;">  </th>
+  </tr>
+   <tr>
+   <th style="text-align:left;"> 0.19 </th>
+   <th style="text-align:left;">  </th>
+   <th style="text-align:right;">  </th>
   <tr>
    <th style="text-align:left;"> 0.20 </th>
    <th style="text-align:left;">  </th>
