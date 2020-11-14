@@ -281,53 +281,53 @@
   <tr>
    <th style="text-align:left;"> punto de corte </th>
    <th style="text-align:left;"> kaggle - BO borrador punto de corte sin transformaciones </th>
-   <th style="text-align:right;"> kaggle - BO borrador punto de corte sin transformaciones </th>
+   <th style="text-align:right;"> kaggle - BO borrador punto de corte con transformaciones </th>
   </tr>
  </thead>
 <tbody>
    <tr>
    <th style="text-align:left;"> 0.17 </th>
    <th style="text-align:left;">  </th>
-   <th style="text-align:right;">  </th>
+   <th style="text-align:right;"> 11.80 </th>
   </tr>
    <tr>
    <th style="text-align:left;"> 0.18 </th>
    <th style="text-align:left;">  </th>
-   <th style="text-align:right;">  </th>
+   <th style="text-align:right;"> 12.22 </th>
   </tr>
    <tr>
    <th style="text-align:left;"> 0.19 </th>
    <th style="text-align:left;">  </th>
-   <th style="text-align:right;">  </th>
+   <th style="text-align:right;"> 12.47 </th>
   <tr>
    <th style="text-align:left;"> 0.20 </th>
    <th style="text-align:left;">  </th>
-   <th style="text-align:right;">  </th>
+   <th style="text-align:right;"> 12.15 </th>
   </tr>
   <tr>
    <th style="text-align:left;"> 0.21 </th>
    <th style="text-align:left;">  </th>
-   <th style="text-align:right;">  </th>
+   <th style="text-align:right;"> 11.85 </th>
   </tr>
    <tr>
    <th style="text-align:left;"> 0.22 </th>
    <th style="text-align:left;">  </th>
-   <th style="text-align:right;">  </th>
+   <th style="text-align:right;"> 11.67 </th>
   </tr>
    <tr>
    <th style="text-align:left;"> 0.23 </th>
    <th style="text-align:left;">  </th>
-   <th style="text-align:right;">  </th>
+   <th style="text-align:right;"> 11.77 </th>
   </tr>
    <tr>
    <th style="text-align:left;"> 0.24 </th>
    <th style="text-align:left;">  </th>
-   <th style="text-align:right;">  </th>
+   <th style="text-align:right;"> 11.64 </th>
   </tr>
    <tr>
    <th style="text-align:left;"> 0.25 </th>
    <th style="text-align:left;">  </th>
-   <th style="text-align:right;">  </th>
+   <th style="text-align:right;"> 11.39 </th>
   </tr>
  </tbody>
 </table>
