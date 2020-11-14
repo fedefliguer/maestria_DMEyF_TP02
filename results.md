@@ -274,3 +274,46 @@
 
 * Bajan todas las ganancias, aunque dos veces sube el AUC.
 * Las mejores son mv_status01, mv_mpagospesos, mv_Finiciomora, mv_status05, mvr_mpagominimo
+* En este punto Denicolay subió el borrador de la linea de muerte trabajando sobre el dataset original (un 10% aleatorio de los no-baja), haciendo transformaciones de lags y con una BO de 10 iteraciones para el único parámetro pmin_data_in_leaf. Se analiza la ganancia en Kaggle (leaderbord público) de ambos con diferentes puntos de corte (de 0.2 a 0.25)
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> punto de corte </th>
+   <th style="text-align:left;"> kaggle - BO borrador punto de corte sin transformaciones </th>
+   <th style="text-align:right;"> kaggle - BO borrador punto de corte sin transformaciones </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <th style="text-align:left;"> 0.20 </th>
+   <th style="text-align:left;">  </th>
+   <th style="text-align:right;">  </th>
+  </tr>
+  <tr>
+   <th style="text-align:left;"> 0.21 </th>
+   <th style="text-align:left;">  </th>
+   <th style="text-align:right;">  </th>
+  </tr>
+   <tr>
+   <th style="text-align:left;"> 0.22 </th>
+   <th style="text-align:left;">  </th>
+   <th style="text-align:right;">  </th>
+  </tr>
+   <tr>
+   <th style="text-align:left;"> 0.23 </th>
+   <th style="text-align:left;">  </th>
+   <th style="text-align:right;">  </th>
+  </tr>
+   <tr>
+   <th style="text-align:left;"> 0.24 </th>
+   <th style="text-align:left;">  </th>
+   <th style="text-align:right;">  </th>
+  </tr>
+   <tr>
+   <th style="text-align:left;"> 0.25 </th>
+   <th style="text-align:left;">  </th>
+   <th style="text-align:right;">  </th>
+  </tr>
+ </tbody>
+</table>
