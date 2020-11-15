@@ -329,6 +329,11 @@
    <th style="text-align:left;"> 11.70 </th>
    <th style="text-align:right;"> 11.39 </th>
   </tr>
+   <tr>
+   <th style="text-align:left;"> Top 5 variables </th>
+   <th style="text-align:left;"> mcaja_ahorro, ctrx_quarter, mcuentas_saldo, mtarjeta_visa_consumo, ctarjeta_visa_transacciones </th>
+   <th style="text-align:right;">  </th>
+  </tr>
  </tbody>
 </table>
 
