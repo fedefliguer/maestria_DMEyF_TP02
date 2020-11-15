@@ -338,3 +338,5 @@
 </table>
 
 * Las modificaciones bajan el score para cualquier punto de corte.
+* El más alto en ambos (0.19) tiene:
+** Sin FE, ganancia 13.714.500 en enero y 8.973.750 en febrero
