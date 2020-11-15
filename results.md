@@ -344,11 +344,4 @@
  3. Sin tirar una nueva BO, pruebo los parámetros de Con FE haciendo ciertos FE:
   3.1. Solo columnas nuevas (sin correcciones) da 12.881.250 en enero y 8.288.250 en febrero.
   3.2. Correcciones y columnas nuevas de Denicolay (sin las mías) da 14.053.500 en enero y 9.042.000 en febrero. 
-
-
- 1. Sin FE, ganancia 13.714.500 en enero y 8.973.750 en febrero
- 2. Con FE, ganancia 13.380.750 en enero y 8.452.500 en febrero
- 3. Sin tirar una nueva BO, pruebo los parámetros de Con FE haciendo ciertos FE:
-  * Solo columnas nuevas (sin correcciones) da 12.881.250 en enero y 8.288.250 en febrero.
-  * Correcciones y columnas nuevas de Denicolay (sin las mías) da 14.053.500 en enero y 9.042.000 en febrero. 
   * **Se eliminan las variables nuevas mías y quedan las de él**.
