@@ -332,7 +332,7 @@
    <tr>
    <th style="text-align:left;"> Top 5 variables </th>
    <th style="text-align:left;"> mcaja_ahorro, ctrx_quarter, mcuentas_saldo, mtarjeta_visa_consumo, ctarjeta_visa_transacciones </th>
-   <th style="text-align:right;">  </th>
+   <th style="text-align:right;"> vl_egresos, mcaja_ahorro, vl_egreso_principal, pc_egreso_principal, mtarjeta_visa_consumo </th>
   </tr>
  </tbody>
 </table>
