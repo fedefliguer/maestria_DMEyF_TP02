@@ -345,3 +345,11 @@
   3.1. Solo columnas nuevas (sin correcciones) da 12.881.250 en enero y 8.288.250 en febrero.
   3.2. Correcciones y columnas nuevas de Denicolay (sin las mías) da 14.053.500 en enero y 9.042.000 en febrero. 
   **Se eliminan las variables nuevas mías y quedan las de él**.
+
+* Fruit
+  * Apple
+  * Orange
+  * Banana
+* Dairy
+  * Milk
+  * Cheese
