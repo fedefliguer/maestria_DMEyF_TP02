@@ -274,7 +274,7 @@
 
 * Bajan todas las ganancias, aunque dos veces sube el AUC.
 * Las mejores son mv_status01, mv_mpagospesos, mv_Finiciomora, mv_status05, mvr_mpagominimo
-* En este punto Denicolay subió el borrador de la linea de muerte trabajando sobre el dataset original (un 10% aleatorio de los no-baja), haciendo transformaciones de lags y con una BO de 10 iteraciones para el único parámetro pmin_data_in_leaf. Se analiza la ganancia en Kaggle (leaderbord público) de ambos con diferentes puntos de corte (de 0.2 a 0.25)
+* En este punto Denicolay subió el borrador de la linea de muerte trabajando sobre el dataset original (un 10% aleatorio de los no-baja), haciendo transformaciones de lags y con una BO de 10 iteraciones para el único parámetro pmin_data_in_leaf. Se analiza la ganancia en Kaggle (leaderbord público) de ambos con diferentes puntos de corte (de 0.2 a 0.25).
 
 <table>
  <thead>
