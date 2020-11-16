@@ -344,4 +344,4 @@
 * Sin tirar una nueva BO, pruebo los parámetros de Con FE haciendo ciertos FE:
  1. Solo columnas nuevas (sin correcciones) da 12.881.250 en enero y 8.288.250 en febrero.
  2. Correcciones y columnas nuevas de Denicolay (sin las mías) da 14.053.500 en enero y 9.042.000 en febrero. 
-* **Se eliminan las variables nuevas mías y quedan las de él**.
+* Lo que dice él es que las variables nuevas siempre van a sumar, por lo que si bajaron es porque los parámetros que él dejó fijos (los dejó fijos pero ya había probado que eran buenos) con estas nuevas variables no son buenos. Tiene sentido en la medida que son variables nuevas, así que seguimos probando con ellas.
