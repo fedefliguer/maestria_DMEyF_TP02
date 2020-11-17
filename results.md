@@ -455,4 +455,5 @@
 </tbody>
 </table>
 
-* Y ahora probamos una BO parecida a la que mandó Denicolay (mismos períodos de prueba y test), pero optimizando todos los parámetros, con más de 5% de los 0 y probando pocos (3) puntos de corte basados en cantidades y no en probabilidades.
+* Panorama claro: Hay ganancia con este método de LAG + DELTA. Por ahora es el candidato para hacer mi BO basada en eso. 
+* La primera BO la probamos con esto, parecida a la que mandó Denicolay (mismos períodos de prueba y test), pero optimizando todos los parámetros, con más de 5% de los 0 y probando pocos (3) puntos de corte basados en cantidades y no en probabilidades.
