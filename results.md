@@ -362,7 +362,7 @@
  </thead>
 <tbody>
   <tr>
-   <td style="text-align:left;"> _correcciones_nuevas_columnas_fede_catedra </td>
+   <td style="text-align:left;"> escalo </td>
    <td style="text-align:left;"> 3m </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 10200000 </td>
@@ -371,7 +371,7 @@
    <td style="text-align:right;"> 0.7590729 </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> _correcciones_nuevas_columnas_fede_catedra </td>
+   <td style="text-align:left;"> escalo </td>
    <td style="text-align:left;"> 12m </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 10122000 </td>
@@ -380,7 +380,7 @@
    <td style="text-align:right;"> 0.7700053 </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> _correcciones_nuevas_columnas_fede_catedra </td>
+   <td style="text-align:left;"> escalo </td>
    <td style="text-align:left;"> 3m </td>
    <td style="text-align:right;"> 2 </td>
    <td style="text-align:right;"> 9987000 </td>
@@ -389,7 +389,7 @@
    <td style="text-align:right;"> 0.7548883 </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> _correcciones_nuevas_columnas_fede_catedra </td>
+   <td style="text-align:left;"> escalo </td>
    <td style="text-align:left;"> 12m </td>
    <td style="text-align:right;"> 2 </td>
    <td style="text-align:right;"> 9195750 </td>
