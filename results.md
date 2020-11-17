@@ -400,4 +400,59 @@
 </tbody>
 </table>
 
-* Claramente no suma. Sin esto, ya probamos una BO parecida a la que mandó Denicolay (mismos períodos de prueba y test), pero optimizando todos los parámetros, con más de 5% de los 0 y probando pocos (3) puntos de corte basados en cantidades y no en probabilidades.
+* Claramente no suma. Sin esto, nos metemos a ver cómo mejorar las variables nuevas que tenemos a partir de lo que mandó en el borrador de la línea de muerte.
+* Empezamos solo haciendole el FE de él (lags y deltas) al dataset que tenemos nosotros, y viendo el impacto como lo venimos haciendo.
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> dataset </th>
+   <th style="text-align:left;"> periods </th>
+   <th style="text-align:right;"> parameters </th>
+   <th style="text-align:right;"> gan_202001 </th>
+   <th style="text-align:right;"> gan_202002 </th>
+   <th style="text-align:right;"> auc </th>
+   <th style="text-align:right;"> ks </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> _fe_borrador </td>
+   <td style="text-align:left;"> 3m </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 11226750 </td>
+   <td style="text-align:right;"> 7687500 </td>
+   <td style="text-align:right;"> 0.9494234 </td>
+   <td style="text-align:right;"> 0.7693056 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> _fe_borrador </td>
+   <td style="text-align:left;"> 12m </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 11848500 </td>
+   <td style="text-align:right;"> 7562250 </td>
+   <td style="text-align:right;"> 0.9542980 </td>
+   <td style="text-align:right;"> 0.7859822 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> _fe_borrador </td>
+   <td style="text-align:left;"> 3m </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 11244750 </td>
+   <td style="text-align:right;"> 7439250 </td>
+   <td style="text-align:right;"> 0.9503816 </td>
+   <td style="text-align:right;"> 0.7669653 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> _fe_borrador </td>
+   <td style="text-align:left;"> 12m </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 11575500 </td>
+   <td style="text-align:right;"> 7478250 </td>
+   <td style="text-align:right;"> 0.9544444 </td>
+   <td style="text-align:right;"> 0.7870401 </td>
+  </tr>
+</tbody>
+</table>
+
+* Y ahora probamos una BO parecida a la que mandó Denicolay (mismos períodos de prueba y test), pero optimizando todos los parámetros, con más de 5% de los 0 y probando pocos (3) puntos de corte basados en cantidades y no en probabilidades.
