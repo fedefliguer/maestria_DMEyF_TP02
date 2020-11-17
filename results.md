@@ -399,3 +399,5 @@
   </tr>
 </tbody>
 </table>
+
+* Claramente no suma. Sin esto, ya probamos una BO parecida a la que mandó Denicolay (mismos períodos de prueba y test), pero 
