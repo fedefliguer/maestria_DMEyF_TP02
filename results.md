@@ -345,3 +345,57 @@
  1. Solo columnas nuevas (sin correcciones) da 12.881.250 en enero y 8.288.250 en febrero.
  2. Correcciones y columnas nuevas de Denicolay (sin las mías) da 14.053.500 en enero y 9.042.000 en febrero. 
 * Lo que dice él es que las variables nuevas siempre van a sumar, por lo que si bajaron es porque los parámetros que él dejó fijos (los dejó fijos pero ya había probado que eran buenos) con estas nuevas variables no son buenos. Tiene sentido en la medida que son variables nuevas, así que seguimos probando con ellas.
+* Tenemos esto en cuenta, esperando que optimizando con más parámetros ayude. Sin embargo seguimos probando nuestro análisis.
+* Ahora escalo variables numéricas por mes (con el método del dropbox) y pruebo:
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> dataset </th>
+   <th style="text-align:left;"> periods </th>
+   <th style="text-align:right;"> parameters </th>
+   <th style="text-align:right;"> gan_202001 </th>
+   <th style="text-align:right;"> gan_202002 </th>
+   <th style="text-align:right;"> auc </th>
+   <th style="text-align:right;"> ks </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> _correcciones_nuevas_columnas_fede_catedra </td>
+   <td style="text-align:left;"> 3m </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 10200000 </td>
+   <td style="text-align:right;"> 6979500 </td>
+   <td style="text-align:right;"> 0.9471565 </td>
+   <td style="text-align:right;"> 0.7590729 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> _correcciones_nuevas_columnas_fede_catedra </td>
+   <td style="text-align:left;"> 12m </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 10122000 </td>
+   <td style="text-align:right;"> 7059750 </td>
+   <td style="text-align:right;"> 0.9501952 </td>
+   <td style="text-align:right;"> 0.7700053 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> _correcciones_nuevas_columnas_fede_catedra </td>
+   <td style="text-align:left;"> 3m </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 9987000 </td>
+   <td style="text-align:right;"> 6580500 </td>
+   <td style="text-align:right;"> 0.9459770 </td>
+   <td style="text-align:right;"> 0.7548883 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> _correcciones_nuevas_columnas_fede_catedra </td>
+   <td style="text-align:left;"> 12m </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 9195750 </td>
+   <td style="text-align:right;"> 5194500 </td>
+   <td style="text-align:right;"> 0.9487536 </td>
+   <td style="text-align:right;"> 0.7660306 </td>
+  </tr>
+</tbody>
+</table>
