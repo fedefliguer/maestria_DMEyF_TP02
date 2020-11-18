@@ -275,7 +275,7 @@
 
 * Bajan todas las ganancias, aunque dos veces sube el AUC.
 * Las mejores son mv_status01, mv_mpagospesos, mv_Finiciomora, mv_status05, mvr_mpagominimo
-* En este punto Denicolay subió el borrador de la linea de muerte trabajando sobre el dataset original (un 10% aleatorio de los no-baja), haciendo transformaciones de lags y con una BO de 10 iteraciones para el único parámetro pmin_data_in_leaf. Se analiza la ganancia en Kaggle (leaderbord público) de ambos con diferentes puntos de corte (de 0.2 a 0.25).
+* En este punto Denicolay subió el borrador de la linea de muerte trabajando sobre el dataset original (un 10% aleatorio de los no-baja), haciendo transformaciones de lags y con una BO de 10 iteraciones para el único parámetro pmin_data_in_leaf. Se genera una BO igual que la de Denicolay (bo_borrador_sin_FE.RDATA), y una ajustandola igual pero con nuestras transformaciones (bo_borrador_con_FE_1par.RDATA). Se analiza la ganancia en Kaggle (leaderbord público) de ambos con diferentes puntos de corte (de 0.2 a 0.25). También me olvidé de cambiar el dataset, y no entrenó con todos los períodos sino desde 201901.
 
 <table>
  <thead>
@@ -338,7 +338,7 @@
  </tbody>
 </table>
 
-* Las modificaciones bajan el score para cualquier punto de corte.
+* Las modificaciones bajan el score para cualquier punto de corte. La explicación me la dijeron en clase: esto pasa porque los otros parámetros que no se ajustaron por la BO estaban elegidos especificamente, y yo asumí que valían también pero se ve que no. 
 * El más alto en ambos (0.19) tiene:
  1. Sin FE, ganancia 13.714.500 en enero y 8.973.750 en febrero
  2. Con FE, ganancia 13.380.750 en enero y 8.452.500 en febrero
@@ -346,7 +346,7 @@
  1. Solo columnas nuevas (sin correcciones) da 12.881.250 en enero y 8.288.250 en febrero.
  2. Correcciones y columnas nuevas de Denicolay (sin las mías) da 14.053.500 en enero y 9.042.000 en febrero. 
 * Lo que dice él es que las variables nuevas siempre van a sumar, por lo que si bajaron es porque los parámetros que él dejó fijos (los dejó fijos pero ya había probado que eran buenos) con estas nuevas variables no son buenos. Tiene sentido en la medida que son variables nuevas, así que seguimos probando con ellas.
-* Tenemos esto en cuenta, esperando que optimizando con más parámetros ayude. Sin embargo seguimos probando nuestro análisis.
+* Tenemos esto en cuenta, esperando que optimizando con más parámetros ayude. Hay que ampliar el espacio de búsqueda.
 * Ahora escalo variables numéricas por mes (con el método del dropbox) y pruebo:
 
 <table>
@@ -402,6 +402,7 @@
 </table>
 
 * Claramente no suma. Sin esto, nos metemos a ver cómo mejorar las variables nuevas que tenemos a partir de lo que mandó en el borrador de la línea de muerte.
+* Vamos con lo otro: ampliar el espacio de búsqueda y ver si mejora.
 * Empezamos solo haciendole el FE de él (lags y deltas) al dataset que tenemos nosotros, y viendo el impacto como lo venimos haciendo.
 
 <table>
@@ -461,4 +462,5 @@
 1. Donde más gano en Enero es mandando los primeros 6000 (corte 0.1731, ganancia 13320000)
 2. Donde más gano en Febrero es mandando los primeros 4000 (corte 0.1811, ganancia 9180000)
 3. Donde más gano en el leaderbord público es mandando los primeros 7000 (corte 0.1311, ganancia 12.58)
+* Primera conclusión: empezar a ampliar el espacio de búsqueda (de 1 a 3 parámetros en conjunto) genera mucha ganancia.
 * En este esquema, parece claro que lo que tenemos que hacer es ampliar el la BO (más de 5% de los 0, más de 10 iteraciones, más parámetros con más espacio de búsqueda) apuntando a que con esto la ganancia crezca. La última duda que me queda antes de tirarme con eso es si ya asegurar este FE o probar un caso de reducir variables y meter más históricas.
