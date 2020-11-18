@@ -457,4 +457,8 @@
 </table>
 
 * Panorama claro: Hay ganancia con este método de LAG + DELTA. Por ahora es el candidato para hacer mi BO basada en eso. 
-* La primera BO la probamos con esto, parecida a la que mandó Denicolay (mismos períodos de prueba y test), pero optimizando todos los parámetros, con más de 5% de los 0 y probando pocos (3) puntos de corte basados en cantidades y no en probabilidades.
+* La primera BO la probamos con este dataset, igual a la que mandó Denicolay (mismos períodos de prueba y test) pero optimizando todos los parámetros, con 10 iteraciones, 5% de los 0 y probando puntos de corte basados en cantidades y no en probabilidades.
+1. Donde más gano en Enero es mandando los primeros 6000 (corte 0.1731, ganancia 13320000)
+2. Donde más gano en Febrero es mandando los primeros 4000 (corte 0.1811, ganancia 9180000)
+3. Donde más gano en el leaderbord público es mandando los primeros 7000 (corte 0.1311, ganancia 12.58)
+* En este esquema, parece claro que lo que tenemos que hacer es ampliar el la BO (más de 5% de los 0, más de 10 iteraciones, más parámetros con más espacio de búsqueda) apuntando a que con esto la ganancia crezca. La última duda que me queda antes de tirarme con eso es si ya asegurar este FE o probar un caso de reducir variables y meter más históricas.
