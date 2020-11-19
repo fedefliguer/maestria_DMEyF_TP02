@@ -517,3 +517,159 @@
   </tr>
 </tbody>
 </table>
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> dataset </th>
+   <th style="text-align:left;"> periods </th>
+   <th style="text-align:right;"> parameters </th>
+   <th style="text-align:right;"> gan_202001 </th>
+   <th style="text-align:right;"> gan_202002 </th>
+   <th style="text-align:right;"> auc </th>
+   <th style="text-align:right;"> ks </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> VARS: 150, VENTANAS: 12 </td>
+   <td style="text-align:left;"> 3m </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 22761000 </td>
+   <td style="text-align:right;"> 16186500 </td>
+   <td style="text-align:right;"> 0.9998911 </td>
+   <td style="text-align:right;"> 0.9885362 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> VARS: 150, VENTANAS: 12 </td>
+   <td style="text-align:left;"> 12m </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 22759500 </td>
+   <td style="text-align:right;"> 16180500 </td>
+   <td style="text-align:right;"> 0.9998995 </td>
+   <td style="text-align:right;"> 0.9896939 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> VARS: 150, VENTANAS: 12 </td>
+   <td style="text-align:left;"> 3m </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 22805250 </td>
+   <td style="text-align:right;"> 16228500 </td>
+   <td style="text-align:right;"> 0.9998836 </td>
+   <td style="text-align:right;"> 0.9892051 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> VARS: 150, VENTANAS: 12 </td>
+   <td style="text-align:left;"> 12m </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 22848000 </td>
+   <td style="text-align:right;"> 16201500 </td>
+   <td style="text-align:right;"> 0.9999077 </td>
+   <td style="text-align:right;"> 0.9902751 </td>
+  </tr>
+</tbody>
+</table>
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> dataset </th>
+   <th style="text-align:left;"> periods </th>
+   <th style="text-align:right;"> parameters </th>
+   <th style="text-align:right;"> gan_202001 </th>
+   <th style="text-align:right;"> gan_202002 </th>
+   <th style="text-align:right;"> auc </th>
+   <th style="text-align:right;"> ks </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> VARS: 100, VENTANAS: 6, 12 </td>
+   <td style="text-align:left;"> 3m </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 22909500 </td>
+   <td style="text-align:right;"> 16266750 </td>
+   <td style="text-align:right;"> 0.9999431 </td>
+   <td style="text-align:right;"> 0.9922744 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> VARS: 100, VENTANAS: 6, 12 </td>
+   <td style="text-align:left;"> 12m </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 22914000 </td>
+   <td style="text-align:right;"> 16269750 </td>
+   <td style="text-align:right;"> 0.9999355 </td>
+   <td style="text-align:right;"> 0.9925076 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> VARS: 100, VENTANAS: 6, 12 </td>
+   <td style="text-align:left;"> 3m </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 22912500 </td>
+   <td style="text-align:right;"> 16240500 </td>
+   <td style="text-align:right;"> 0.9999486 </td>
+   <td style="text-align:right;"> 0.9923323 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> VARS: 100, VENTANAS: 6, 12 </td>
+   <td style="text-align:left;"> 12m </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 22924500 </td>
+   <td style="text-align:right;"> 16281750 </td>
+   <td style="text-align:right;"> 0.9999392 </td>
+   <td style="text-align:right;"> 0.9919173 </td>
+  </tr>
+</tbody>
+</table>
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> dataset </th>
+   <th style="text-align:left;"> periods </th>
+   <th style="text-align:right;"> parameters </th>
+   <th style="text-align:right;"> gan_202001 </th>
+   <th style="text-align:right;"> gan_202002 </th>
+   <th style="text-align:right;"> auc </th>
+   <th style="text-align:right;"> ks </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> VARS: 50, VENTANAS: 3, 6, 12 </td>
+   <td style="text-align:left;"> 3m </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 22926000 </td>
+   <td style="text-align:right;"> 16284000 </td>
+   <td style="text-align:right;"> 0.9999460 </td>
+   <td style="text-align:right;"> 0.9923113 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> VARS: 50, VENTANAS: 3, 6, 12 </td>
+   <td style="text-align:left;"> 12m </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 22932000 </td>
+   <td style="text-align:right;"> 16291500 </td>
+   <td style="text-align:right;"> 0.9999425 </td>
+   <td style="text-align:right;"> 0.9923388 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> VARS: 50, VENTANAS: 3, 6, 12 </td>
+   <td style="text-align:left;"> 3m </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 22931250 </td>
+   <td style="text-align:right;"> 16290000 </td>
+   <td style="text-align:right;"> 0.9999502 </td>
+   <td style="text-align:right;"> 0.9923228 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> VARS: 50, VENTANAS: 3, 6, 12 </td>
+   <td style="text-align:left;"> 12m </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 22932000 </td>
+   <td style="text-align:right;"> 16292250 </td>
+   <td style="text-align:right;"> 0.9999459 </td>
+   <td style="text-align:right;"> 0.9921869 </td>
+  </tr>
+</tbody>
+</table>
