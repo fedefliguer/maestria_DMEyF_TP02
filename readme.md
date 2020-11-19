@@ -38,6 +38,21 @@ nuevas_columnas_fede(ds)
 source_url("https://raw.githubusercontent.com/fedefliguer/maestria_DMEyF_TP02/main/scripts/nuevas_columnas_catedra.R")
 nuevas_columnas_catedra(ds)
 
+# Si quiero quedarme únicamente con las n variables más importantes según los modelos 1 a 5
+source_url("https://raw.githubusercontent.com/fedefliguer/maestria_DMEyF_TP02/main/scripts/solo_importantes.R")
+nu_variables = 100
+solo_importantes(ds, nu_variables)
+
+# Agrego el lag 1 y el delta 1 para todas las variables seleccionadas
+source_url("https://raw.githubusercontent.com/fedefliguer/maestria_DMEyF_TP02/main/scripts/lag_delta.R")
+lag_delta(ds)
+
+# Agrego históricas (maximo, minimo, tendencia) para las ventanas que quiera
+ventanas = c(3, 6)
+source_url("https://raw.githubusercontent.com/fedefliguer/maestria_DMEyF_TP02/main/scripts/variables_historicas.R")
+variables_historicas(ds, ventanas)
+
+# Genero el testeo del impacto
 source_url("https://raw.githubusercontent.com/fedefliguer/maestria_DMEyF_TP02/main/fe_tester.R")
 fe_tester(ds, "_correcciones_nuevas_columnas_fede_catedra")
 
