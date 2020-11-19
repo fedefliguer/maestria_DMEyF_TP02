@@ -62,7 +62,10 @@ variables_historicas_fe_multiperiod = function(dataset, ventanas){
   columnas_no_procesar  <- c( "numero_de_cliente", "foto_mes", "clase_binaria" )
   columnas_originales <-  copy(colnames( dataset ))
   columnas_originales_a_procesar  <- setdiff( columnas_originales,  columnas_no_procesar  )  
-  
+  columnas_originales_a_procesar = gsub("_delta1","",columnas_originales_a_procesar)
+  columnas_originales_a_procesar = gsub("_lag1","",columnas_originales_a_procesar)
+  columnas_originales_a_procesar = unique(columnas_originales_a_procesar)
+
   for (v in ventanas){
     setorder( dataset,  numero_de_cliente, foto_mes )
     last <- nrow( dataset )
