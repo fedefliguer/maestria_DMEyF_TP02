@@ -48,9 +48,8 @@ fe_tester = function(dataset, transformations){
       
       val_p  <- predict(modelo, data.matrix( val[, campos_buenos, with=FALSE ]))
       val_pr  <- prediction( val_p, val$clase01)
-      AUC  <- performance( val_pr,"auc")@y.values[[1]]
-      
-      perf <- performance(val_pr, "tpr", "fpr")
+      AUC  <- ROCR::performance( val_pr,"auc")@y.values[[1]]
+      perf <- ROCR::performance(val_pr, "tpr", "fpr")
       ks <- max(attr(perf, "y.values")[[1]] - (attr(perf, "x.values")[[1]]))
 
       
