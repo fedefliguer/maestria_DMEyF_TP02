@@ -59,7 +59,7 @@ variables_historicas = function(dataset, ventanas){
     return  out;
   }')
   
-  columnas_no_procesar  <- c( "numero_de_cliente", "foto_mes", "clase_binaria" )
+  columnas_no_procesar  <- c( "numero_de_cliente", "foto_mes", "clase01" )
   columnas_originales <-  copy(colnames( dataset ))
   columnas_originales_a_procesar  <- setdiff( columnas_originales,  columnas_no_procesar  )  
   columnas_originales_a_procesar = gsub("_delta1","",columnas_originales_a_procesar)
