@@ -464,3 +464,56 @@
 3. Donde más gano en el leaderbord público es mandando los primeros 7000 (corte 0.1311, ganancia 12.58)
 * Primera conclusión: empezar a ampliar el espacio de búsqueda (de 1 a 3 parámetros en conjunto) genera mucha ganancia.
 * En este esquema, parece claro que lo que tenemos que hacer es ampliar el la BO (más de 5% de los 0, más de 10 iteraciones, más parámetros con más espacio de búsqueda) apuntando a que con esto la ganancia crezca. La última duda que me queda antes de tirarme con eso es si ya asegurar este FE o probar un caso de reducir variables y meter más históricas.
+* Probamos eso: el FE Borrador va contra dos casos donde reduzco variables pero agrego lags
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> dataset </th>
+   <th style="text-align:left;"> periods </th>
+   <th style="text-align:right;"> parameters </th>
+   <th style="text-align:right;"> gan_202001 </th>
+   <th style="text-align:right;"> gan_202002 </th>
+   <th style="text-align:right;"> auc </th>
+   <th style="text-align:right;"> ks </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> VARS: 238, VENTANAS: Ninguna </td>
+   <td style="text-align:left;"> 3m </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 11226750 </td>
+   <td style="text-align:right;"> 7687500 </td>
+   <td style="text-align:right;"> 0.9494234 </td>
+   <td style="text-align:right;"> 0.7693056 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> VARS: 238, VENTANAS: Ninguna </td>
+   <td style="text-align:left;"> 12m </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 11848500 </td>
+   <td style="text-align:right;"> 7562250 </td>
+   <td style="text-align:right;"> 0.9542980 </td>
+   <td style="text-align:right;"> 0.7859822 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> VARS: 238, VENTANAS: Ninguna </td>
+   <td style="text-align:left;"> 3m </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 11244750 </td>
+   <td style="text-align:right;"> 7439250 </td>
+   <td style="text-align:right;"> 0.9503816 </td>
+   <td style="text-align:right;"> 0.7669653 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> VARS: 238, VENTANAS: Ninguna </td>
+   <td style="text-align:left;"> 12m </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 11575500 </td>
+   <td style="text-align:right;"> 7478250 </td>
+   <td style="text-align:right;"> 0.9544444 </td>
+   <td style="text-align:right;"> 0.7870401 </td>
+  </tr>
+</tbody>
+</table>
