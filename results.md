@@ -515,5 +515,41 @@
    <td style="text-align:right;"> 0.9544444 </td>
    <td style="text-align:right;"> 0.7870401 </td>
   </tr>
+  <tr>
+   <td style="text-align:left;"> VARS: 50, VENTANAS: 3, 6, 12 </td>
+   <td style="text-align:left;"> 3m </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 11115750 </td>
+   <td style="text-align:right;"> 7627500 </td>
+   <td style="text-align:right;"> 0.9476855 </td>
+   <td style="text-align:right;"> 0.7732366 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> VARS: 50, VENTANAS: 3, 6, 12 </td>
+   <td style="text-align:left;"> 12m </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 12045750 </td>
+   <td style="text-align:right;"> 7792500 </td>
+   <td style="text-align:right;"> 0.9511031 </td>
+   <td style="text-align:right;"> 0.7820929 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> VARS: 50, VENTANAS: 3, 6, 12 </td>
+   <td style="text-align:left;"> 3m </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 11265000 </td>
+   <td style="text-align:right;"> 7439250 </td>
+   <td style="text-align:right;"> 0.9468016 </td>
+   <td style="text-align:right;"> 0.7705608 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> VARS: 50, VENTANAS: 3, 6, 12 </td>
+   <td style="text-align:left;"> 12m </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 11766000 </td>
+   <td style="text-align:right;"> 7642500 </td>
+   <td style="text-align:right;"> 0.9513720 </td>
+   <td style="text-align:right;"> 0.7807305 </td>
+  </tr>
 </tbody>
 </table>
