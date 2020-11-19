@@ -6,5 +6,5 @@ solo_importantes = function(dataset, importance_min){
   importances <- data.table(read_csv2(myfile))
   importances = importances[max_gan>importance_min]
   variables = unique(importances$Feature)
-  dataset = dataset[, c("foto_mes", "numero_de_cliente", variables, "clase01"), with=FALSE]
+  ds <<- dataset[, c("foto_mes", "numero_de_cliente", variables, "clase01"), with=FALSE]
   }
