@@ -662,7 +662,7 @@
   <tr>
    <td style="text-align:left;"> VARS: 150, VENTANAS 3,6,12 (para 1-50), 12 (para 51-150) </td>
    <td style="text-align:left;"> 12m </td>
-   <td style="text-align:right;"> 1 **m6* </td>
+   <td style="text-align:right;"> 1 - m6 </td>
    <td style="text-align:right;"> 12045000 </td>
    <td style="text-align:right;"> 8478750 </td>
    <td style="text-align:right;"> 0.9556689 </td>
@@ -680,7 +680,7 @@
   <tr>
    <td style="text-align:left;"> VARS: 150, VENTANAS 3,6,12 (para 1-50), 12 (para 51-150) </td>
    <td style="text-align:left;"> 12m </td>
-   <td style="text-align:right;"> 2 **m7** </td>
+   <td style="text-align:right;"> 2 - m7 </td>
    <td style="text-align:right;"> 11955000 </td>
    <td style="text-align:right;"> 7946250 </td>
    <td style="text-align:right;"> 0.9558679 </td>
