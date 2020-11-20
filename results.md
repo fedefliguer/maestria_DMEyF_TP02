@@ -699,7 +699,7 @@
 4. 7000 me da 12.15
 5. 8000 me da 11.88
 
-* Listo, ATR para nuestra BO? No! Recordemos la última BO que hicimos, bo_borrador_con_FE_3par.RDATA que dio 12.58 en el leaderbord público. Acá con una prueba de parámetros dio 12.73. Como quiero hacer un análisis siempre marginal, voy a tirar primero esa misma BO más chica (la llamo bo_borrador_con_FE_Historicas_3par.RDATA), igual a la que hicimos antes pero con este dataset enriquecido (y ya definitivo?). Sería nuestra baseline de la BO, y también nuestra baseline de los tiempos para entender cuánto gano porque puede tardar un montón. Solo después de tener eso puedo extender el espacio de búsqueda.
+* Listo, ATR para nuestra BO? No! Recordemos la última BO que hicimos, bo_borrador_con_FE_3par.RDATA que dio 12.58 en el leaderbord público. Acá con una prueba de parámetros dio 12.73. Como quiero hacer un análisis siempre marginal, voy a tirar primero esa misma BO más chica (la llamo bo_borrador_con_FE_Historicas_3par.RDATA), igual a la que hicimos antes pero con este dataset enriquecido (y ya definitivo?). Sería nuestra baseline de la BO, y también nuestra baseline de los tiempos (tardó 2.30hs) para entender cuánto gano porque puede tardar un montón. Solo después de tener eso puedo extender el espacio de búsqueda.
 0. 4000 me da 12.31
 1. 5000 me da 12.16
 2. 5500 me da 12.91
@@ -707,3 +707,5 @@
 4. 6500 me da 12.82
 5. 7000 me da 12.92
 6. 8000 me da 12.63
+
+* Ahora sí. La BO que corramos tiene que crecer respecto de estos scores.
