@@ -635,3 +635,4 @@
 </table>
 
 * Mepa que la mejor es 150 variables y la ventana de 12, obvio que si no nos molesta forzarla un poco más podrían ser las 238 con su ventana de 12 O (esto sería bastante más pesado) las 150 con 12 y 6 o 12 y 3.
+* Una idea más antes de la BO. No se podrá combinar? Es decir, para las primeras 50 tirar las tres ventanas (3, 6, 12) y desde la 50 hasta la 150 tirar solo la 12.
