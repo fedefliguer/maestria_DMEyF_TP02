@@ -342,11 +342,11 @@
 </table>
 
 * El punto de corte más alto en ambos (0.19) tiene:
- 1. Sin FE, ganancia 13.714.500 en enero y 8.973.750 en febrero
- 2. Con FE, ganancia 13.380.750 en enero y 8.452.500 en febrero
-* Sin tirar una nueva BO, pruebo los parámetros de Con FE haciendo ciertos FE:
- 1. Solo columnas nuevas (sin correcciones) da 12.881.250 en enero y 8.288.250 en febrero.
- 2. Correcciones y columnas nuevas de Denicolay (sin las mías) da 14.053.500 en enero y 9.042.000 en febrero. 
+ 1. Sin FE, ganancia 13.714.500 en enero y 8.973.750 en febrero **Guarda que se usó para entrenar**
+ 2. Con FE, ganancia 13.380.750 en enero y 8.452.500 en febrero **Guarda que se usó para entrenar**
+* Sin tirar una nueva BO, pruebo un nuevo modelo con esos parámetros:
+ 1. Solo columnas nuevas (sin correcciones) da 12.881.250 en enero y 8.288.250 en febrero. **Guarda que se usó para entrenar**
+ 2. Correcciones y columnas nuevas de Denicolay (sin las mías) da 14.053.500 en enero y 9.042.000 en febrero. **Guarda que se usó para entrenar**
 * Las modificaciones bajan el score para cualquier punto de corte. ¿Estamos haciendo todo mal y conviene no hacer ningun cambio de variable? La explicación me la dijeron en clase: esto pasa porque todos los otros parámetros (salvo pmin_data_in_leaf) que no se ajustaron por la BO estaban elegidos especificamente, es decir que Denicolay probó que anden bien. Yo, en cambio, para mi nuevo dataset asumí que valían también pero se ve que no. 
 
 * Tenemos esto en cuenta, esperando que optimizando con más parámetros ayude. Hay que ampliar el espacio de búsqueda.
@@ -462,8 +462,8 @@
 * Panorama claro: Hay ganancia con este método de LAG + DELTA. Es el candidato para hacer mi BO basada en eso. 
 * Tiro mi BO (bo_borrador_con_FE_3par.RDATA) con este dataset. La optimización es igual a la que mandó Denicolay (10 iteraciones, 5% de los que no son baja, mismos períodos de prueba y test) pero optimizando 3 parámetros.
 * Pruebo los puntos de corte pensando en cantidades:
-1. Donde más gano en Enero es mandando los primeros 6000 (corte 0.1731, ganancia 13320000)
-2. Donde más gano en Febrero es mandando los primeros 4000 (corte 0.1811, ganancia 9180000)
+1. Donde más gano en Enero es mandando los primeros 6000 (corte 0.1731, ganancia 13320000) **Guarda que se usó para entrenar**
+2. Donde más gano en Febrero es mandando los primeros 4000 (corte 0.1811, ganancia 9180000) **Guarda que se usó para entrenar**
 3. Donde más gano en el leaderbord público es mandando los primeros 7000 (corte 0.1311, ganancia 12.58)
 * Primera conclusión: empezar a ampliar el espacio de búsqueda (de 1 a 3 parámetros en conjunto) genera mucha ganancia. Los pasos a seguir son ampliar las otras cuestiones:
 1. Más de 5% de los 0
