@@ -6,9 +6,10 @@ library(devtools)
 library(Rcpp)
 library(lightgbm)
 library(methods)
-library(xgboost)
 library(ROCR)
 library(knitr)
+library(mlrMBO)
+library(readr)
 
 set.seed(1)
 
@@ -24,7 +25,21 @@ ds[ , clase_ternaria :=  NULL  ]
 
 #setwd(  "~/buckets/b1/tp2-working/" )
 
-# FEATURE ENGINEERING
+############ FE
+
+source_url("https://raw.githubusercontent.com/fedefliguer/maestria_DMEyF_TP02/main/scripts/correcciones.R")
+correcciones(ds)
+
+source_url("https://raw.githubusercontent.com/fedefliguer/maestria_DMEyF_TP02/main/scripts/nuevas_columnas_fede.R")
+nuevas_columnas_fede(ds)
+
+source_url("https://raw.githubusercontent.com/fedefliguer/maestria_DMEyF_TP02/main/scripts/nuevas_columnas_catedra.R")
+nuevas_columnas_catedra(ds)
+
+# Si quiero quedarme únicamente con las n variables más importantes según los modelos 1 a 5
+source_url("https://raw.githubusercontent.com/fedefliguer/maestria_DMEyF_TP02/main/scripts/solo_importantes.R")
+nu_variables = 150
+solo_importantes(ds, nu_variables)
 
 # Ensayo 1: Corrección de columnas que a priori son malas
 source_url("https://raw.githubusercontent.com/fedefliguer/maestria_DMEyF_TP02/main/scripts/correcciones.R")
@@ -38,9 +53,11 @@ nuevas_columnas_fede(ds)
 source_url("https://raw.githubusercontent.com/fedefliguer/maestria_DMEyF_TP02/main/scripts/nuevas_columnas_catedra.R")
 nuevas_columnas_catedra(ds)
 
+base = ds
+
 # Si quiero quedarme únicamente con las n variables más importantes según los modelos 1 a 5
 source_url("https://raw.githubusercontent.com/fedefliguer/maestria_DMEyF_TP02/main/scripts/solo_importantes.R")
-nu_variables = 100
+nu_variables = 150
 solo_importantes(ds, nu_variables)
 
 # Agrego el lag 1 y el delta 1 para todas las variables seleccionadas
@@ -48,14 +65,31 @@ source_url("https://raw.githubusercontent.com/fedefliguer/maestria_DMEyF_TP02/ma
 lag_delta(ds)
 
 # Agrego históricas (maximo, minimo, tendencia) para las ventanas que quiera
+ventanas = c(12)
+source_url("https://raw.githubusercontent.com/fedefliguer/maestria_DMEyF_TP02/main/scripts/variables_historicas.R")
+variables_historicas(ds, ventanas)
+
+ds_150 = ds
+
+# SOLO PARA LAS 50 MEJORES
+ds = base
+
+source_url("https://raw.githubusercontent.com/fedefliguer/maestria_DMEyF_TP02/main/scripts/solo_importantes.R")
+nu_variables = 50
+solo_importantes(ds, nu_variables)
+
 ventanas = c(3, 6)
 source_url("https://raw.githubusercontent.com/fedefliguer/maestria_DMEyF_TP02/main/scripts/variables_historicas.R")
 variables_historicas(ds, ventanas)
 
+ds_50 = ds[ , grepl( "__" , names( ds ) ), with = FALSE ]
+
+ds = cbind(ds_150, ds_50)
+
 # Genero el testeo del impacto
 source_url("https://raw.githubusercontent.com/fedefliguer/maestria_DMEyF_TP02/main/fe_tester.R")
-fe_tester(ds, "_correcciones_nuevas_columnas_fede_catedra")
+fe_tester(ds, "VARS: 150, VENTANAS 3,6,12 (para 1-50), 12 (para 51-150)")
 
 # CONVIERTO A RESULTADOS PARA AGREGAR AL RESULTS.MD
-kable(results, format = "html")
+v150_ve3612_12 = kable(results, format = "html")
 ```
