@@ -687,3 +687,5 @@
    <td style="text-align:right;"> 0.7924988 </td>
   </tr>
 </tbody>
+ 
+ * Genial, hay buena ganancia. Este va a ser el dataset sobre el que voy a hacer mi BO.
