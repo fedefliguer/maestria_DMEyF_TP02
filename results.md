@@ -692,3 +692,9 @@
 * Genial, hay buena ganancia. Este va a ser el dataset sobre el que voy a hacer mi BO.
 * Me guardo las importancias de los modelos de 12 meses (importances_m6 y importances_m7) por si durante la BO en algún momento convenga que ajustar la cantidad de variables (no sería lo ideal).
 * Pruebo con algunos puntos de corte sobre Kaggle, elijo el m7.
+0. 4000 me da 12.08
+1. 5000 me da 12.50
+2. 5500 me da 12.73
+3. 6000 me da 12.49
+4. 7000 me da 12.15
+5. 8000 me da 11.88
