@@ -636,3 +636,54 @@
 
 * Mepa que la mejor es 150 variables y la ventana de 12, obvio que si no nos molesta forzarla un poco más podrían ser las 238 con su ventana de 12 O (esto sería bastante más pesado) las 150 con 12 y 6 o 12 y 3.
 * Una idea más antes de la BO. No se podrá combinar? Es decir, para las primeras 50 tirar las tres ventanas (3, 6, 12) y desde la 50 hasta la 150 tirar solo la 12. Hago la prueba: queda un dataset pesado (1138 variables) pero si ibamos a usar el método de las 150 con ventana de 12 teníamos más de 900, o sea solo se suman 200 que pintan para ser buenas.
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> dataset </th>
+   <th style="text-align:left;"> periods </th>
+   <th style="text-align:right;"> parameters </th>
+   <th style="text-align:right;"> gan_202001 </th>
+   <th style="text-align:right;"> gan_202002 </th>
+   <th style="text-align:right;"> auc </th>
+   <th style="text-align:right;"> ks </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> VARS: 150, VENTANAS 3,6,12 (para 1-50), 12 (para 51-150) </td>
+   <td style="text-align:left;"> 3m </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 11133000 </td>
+   <td style="text-align:right;"> 7835250 </td>
+   <td style="text-align:right;"> 0.9507317 </td>
+   <td style="text-align:right;"> 0.7780712 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> VARS: 150, VENTANAS 3,6,12 (para 1-50), 12 (para 51-150) </td>
+   <td style="text-align:left;"> 12m </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 12045000 </td>
+   <td style="text-align:right;"> 8478750 </td>
+   <td style="text-align:right;"> 0.9556689 </td>
+   <td style="text-align:right;"> 0.7889728 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> VARS: 150, VENTANAS 3,6,12 (para 1-50), 12 (para 51-150) </td>
+   <td style="text-align:left;"> 3m </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 11436750 </td>
+   <td style="text-align:right;"> 7956750 </td>
+   <td style="text-align:right;"> 0.9515071 </td>
+   <td style="text-align:right;"> 0.7823749 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> VARS: 150, VENTANAS 3,6,12 (para 1-50), 12 (para 51-150) </td>
+   <td style="text-align:left;"> 12m </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 11955000 </td>
+   <td style="text-align:right;"> 7946250 </td>
+   <td style="text-align:right;"> 0.9558679 </td>
+   <td style="text-align:right;"> 0.7924988 </td>
+  </tr>
+</tbody>
