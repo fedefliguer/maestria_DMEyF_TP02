@@ -698,3 +698,5 @@
 3. 6000 me da 12.49
 4. 7000 me da 12.15
 5. 8000 me da 11.88
+
+* Listo, ATR para nuestra BO? No! Recordemos la última BO que hicimos, 
