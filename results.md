@@ -689,4 +689,6 @@
 </tbody>
 </table>
 
-* Genial, hay buena ganancia. Este va a ser el dataset sobre el que voy a hacer mi BO. Me guardo las importancias de los modelos de 12 meses por si durante la BO en algún momento convenga que ajustar la cantidad de variables (no sería lo ideal), y tomando mi modelo de 12 meses con el conjunto 1 de parámetros, pruebo con algunos puntos de corte sobre Kaggle.
+* Genial, hay buena ganancia. Este va a ser el dataset sobre el que voy a hacer mi BO.
+* Me guardo las importancias de los modelos de 12 meses (importances_m6 y importances_m7) por si durante la BO en algún momento convenga que ajustar la cantidad de variables (no sería lo ideal).
+* Pruebo con algunos puntos de corte sobre Kaggle, elijo el m7.
