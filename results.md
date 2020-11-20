@@ -1,5 +1,7 @@
-* Targets por mes: **no es parejo**. De 201901 a 201912 tiene entre 850 y 1100, mientras que en 202001 tiene 799, 202002 562, 202003 411.
-* Baseline con todo tal cual está:
+* Bajas+2 por mes: **no es parejo**. De 201901 a 201912 tiene entre 850 y 1100, mientras que en 202001 tiene 799, 202002 562, 202003 411.
+* Empiezo a trabajar con el método del fe_tester: cambio que hago en el dataset le aplico esa función, que me genera cuatro modelos: dos períodos (3meses -201910 a 201912- y 12meses -201901 a 201912-) X dos conjuntos de parámetros (C1 = num_iterations= 1265,learning_rate=  0.01020333,feature_fraction=  0.2333709,min_gain_to_split= 0.003569764,num_leaves=  417,lambda_l1= 4.553854,lambda_l2=  7.115316 y C2 = num_iterations= 1468, learning_rate= 0.01503084, feature_fraction= 0.2575957, min_gain_to_split= 0.01428075, num_leaves= 94, lambda_l1= 3.758696, lambda_l2= 0.341236). Evalúa la ganancia de ese modelo en enero y en febrero, y AUC y KS en enero + febrero.
+
+* Primer experimento: baseline con todo tal cual está:
 
 <table>
  <thead>
@@ -53,7 +55,7 @@
  </tbody>
 </table>
 
-* Pruebo agregarle las correcciones a la base del dropbox
+* Primera prueba: le agrego las correcciones a la base del dropbox
 
 <table>
  <thead>
@@ -218,8 +220,8 @@
 </tbody>
 </table>
 
-* Le gana en AUC a todos, así que quedan.
-* Pruebo las nuevas columnas que armó Denicolay.
+* Le gana en AUC a todos, así que parece que vamos bien.
+* Ahora pruebo con las columnas que armó Denicolay (las mismas que habíamos usado en el tp anterior).
 
 <table>
  <thead>
@@ -273,9 +275,10 @@
 </tbody>
 </table>
 
-* Bajan todas las ganancias, aunque dos veces sube el AUC.
-* Las mejores son mv_status01, mv_mpagospesos, mv_Finiciomora, mv_status05, mvr_mpagominimo
-* En este punto Denicolay subió el borrador de la linea de muerte trabajando sobre el dataset original (un 10% aleatorio de los no-baja), haciendo transformaciones de lags y con una BO de 10 iteraciones para el único parámetro pmin_data_in_leaf. Se genera una BO igual que la de Denicolay (bo_borrador_sin_FE.RDATA), y una ajustandola igual pero con nuestras transformaciones (bo_borrador_con_FE_1par.RDATA). Se analiza la ganancia en Kaggle (leaderbord público) de ambos con diferentes puntos de corte (de 0.2 a 0.25). También me olvidé de cambiar el dataset, y no entrenó con todos los períodos sino desde 201901.
+* Bajan todas las ganancias, aunque dos veces sube el AUC. ¿Las incluimos o no? Por ahora no sé.
+* Las mejores son mv_status01, mv_mpagospesos, mv_Finiciomora, mv_status05, mvr_mpagominimo.
+
+* En este punto Denicolay subió el borrador de la linea de muerte trabajando sobre el dataset original (un 5% aleatorio de los no-baja), haciendo sólamente transformaciones de lags y con una BO de 10 iteraciones para el único parámetro pmin_data_in_leaf. Para analizar cómo vamos con estas transformaciones, pruebo esa optimización que mandó (bo_borrador_sin_FE.RDATA), y pruebo una igual pero con nuestras transformaciones (bo_borrador_con_FE_1par.RDATA). Se analiza la ganancia en Kaggle (leaderbord público) de ambos con diferentes puntos de corte (de 0.2 a 0.25). **POSTERIOR**: Lo que mandó él entrenaba con muchos períodos, yo me olvidé de cambiar el dataset así que entrenó desde 201901.
 
 <table>
  <thead>
@@ -338,14 +341,14 @@
  </tbody>
 </table>
 
-* Las modificaciones bajan el score para cualquier punto de corte. La explicación me la dijeron en clase: esto pasa porque los otros parámetros que no se ajustaron por la BO estaban elegidos especificamente, y yo asumí que valían también pero se ve que no. 
-* El más alto en ambos (0.19) tiene:
+* El punto de corte más alto en ambos (0.19) tiene:
  1. Sin FE, ganancia 13.714.500 en enero y 8.973.750 en febrero
  2. Con FE, ganancia 13.380.750 en enero y 8.452.500 en febrero
 * Sin tirar una nueva BO, pruebo los parámetros de Con FE haciendo ciertos FE:
  1. Solo columnas nuevas (sin correcciones) da 12.881.250 en enero y 8.288.250 en febrero.
  2. Correcciones y columnas nuevas de Denicolay (sin las mías) da 14.053.500 en enero y 9.042.000 en febrero. 
-* Lo que dice él es que las variables nuevas siempre van a sumar, por lo que si bajaron es porque los parámetros que él dejó fijos (los dejó fijos pero ya había probado que eran buenos) con estas nuevas variables no son buenos. Tiene sentido en la medida que son variables nuevas, así que seguimos probando con ellas.
+* Las modificaciones bajan el score para cualquier punto de corte. ¿Estamos haciendo todo mal y conviene no hacer ningun cambio de variable? La explicación me la dijeron en clase: esto pasa porque todos los otros parámetros (salvo pmin_data_in_leaf) que no se ajustaron por la BO estaban elegidos especificamente, es decir que Denicolay probó que anden bien. Yo, en cambio, para mi nuevo dataset asumí que valían también pero se ve que no. 
+
 * Tenemos esto en cuenta, esperando que optimizando con más parámetros ayude. Hay que ampliar el espacio de búsqueda.
 * Ahora escalo variables numéricas por mes (con el método del dropbox) y pruebo:
 
@@ -401,9 +404,8 @@
 </tbody>
 </table>
 
-* Claramente no suma. Sin esto, nos metemos a ver cómo mejorar las variables nuevas que tenemos a partir de lo que mandó en el borrador de la línea de muerte.
-* Vamos con lo otro: ampliar el espacio de búsqueda y ver si mejora.
-* Empezamos solo haciendole el FE de él (lags y deltas) al dataset que tenemos nosotros, y viendo el impacto como lo venimos haciendo.
+* Claramente no suma. Descartamos esto y volvemos a la creación de variables. Con las dos FE, ya tenemos nuestro conjunto de variables, por lo que podemos hacer el análisis marginal de incorporar históricas.
+* Empezamos probando el FE de él (lags y deltas) sobre el dataset que tenemos nosotros, y viendo el impacto como lo venimos haciendo.
 
 <table>
  <thead>
@@ -457,14 +459,20 @@
 </tbody>
 </table>
 
-* Panorama claro: Hay ganancia con este método de LAG + DELTA. Por ahora es el candidato para hacer mi BO basada en eso. 
-* La primera BO (bo_borrador_con_FE_3par.RDATA) la probamos con este dataset, igual a la que mandó Denicolay (mismos períodos de prueba y test) pero optimizando 3 parámetros, con 10 iteraciones, 5% de los 0 y probando puntos de corte basados en cantidades y no en probabilidades.
+* Panorama claro: Hay ganancia con este método de LAG + DELTA. Es el candidato para hacer mi BO basada en eso. 
+* Tiro mi BO (bo_borrador_con_FE_3par.RDATA) con este dataset. La optimización es igual a la que mandó Denicolay (10 iteraciones, 5% de los que no son baja, mismos períodos de prueba y test) pero optimizando 3 parámetros.
+* Pruebo los puntos de corte pensando en cantidades:
 1. Donde más gano en Enero es mandando los primeros 6000 (corte 0.1731, ganancia 13320000)
 2. Donde más gano en Febrero es mandando los primeros 4000 (corte 0.1811, ganancia 9180000)
 3. Donde más gano en el leaderbord público es mandando los primeros 7000 (corte 0.1311, ganancia 12.58)
-* Primera conclusión: empezar a ampliar el espacio de búsqueda (de 1 a 3 parámetros en conjunto) genera mucha ganancia.
-* En este esquema, parece claro que lo que tenemos que hacer es ampliar el la BO (más de 5% de los 0, más de 10 iteraciones, más parámetros con más espacio de búsqueda) apuntando a que con esto la ganancia crezca. La última duda que me queda antes de tirarme con eso es si ya asegurar este FE o probar un caso de reducir variables y meter más históricas.
-* Probamos eso: el FE Borrador va contra dos casos donde reduzco variables pero agrego lags
+* Primera conclusión: empezar a ampliar el espacio de búsqueda (de 1 a 3 parámetros en conjunto) genera mucha ganancia. Los pasos a seguir son ampliar las otras cuestiones:
+1. Más de 5% de los 0
+2. Más de 10 iteraciones
+3. Más parámetros para buscar
+4. Más espacio de búsqueda en cada parámetro.
+* Con todo esto la ganancia tiene que crecer. 
+* La última duda que me queda antes de tirarme con eso es si ya con este FE estamos bien, o si podemos probar algo que había quedado del TP anterior: quedarme con algunas (las mejores) variables y sacarle más jugo histórico.
+* Probamos eso en marginal: la última tabla que subí (FE de él sobre el dataset que tenemos nosotros) es el punto de partida, y se compara contra el mismo FE pero conservando únicamente una proporción de las variables y agregando ventanas históricas. 
 
 <table>
  <thead>
@@ -625,3 +633,5 @@
   </tr>
 </tbody>
 </table>
+
+* Hay que definir con qué vamos y ya tirar nuestra BO gigante.
