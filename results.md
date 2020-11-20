@@ -699,4 +699,4 @@
 4. 7000 me da 12.15
 5. 8000 me da 11.88
 
-* Listo, ATR para nuestra BO? No! Recordemos la última BO que hicimos, 
+* Listo, ATR para nuestra BO? No! Recordemos la última BO que hicimos, bo_borrador_con_FE_3par.RDATA que dio 12.58 en el leaderbord público. Acá con una prueba de parámetros dio 12.73. Como quiero hacer un análisis siempre marginal, voy a tirar primero una BO más chica (bo_borrador_con_FE_Historicas_3par.RDATA), igual a la que hicimos antes pero con este dataset enriquecido (y ya definitivo?). Solo después de medir eso (y de medir los tiempos, porque esto va a ser realmente grande) voy a extender el espacio de búsqueda.
