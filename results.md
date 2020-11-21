@@ -40,7 +40,7 @@
 | 20000 | -6.00 | -4.50 | -3.00 | -1.50 |  0.00 |  1.50 |  3.00 |  4.50 |  6.00 |  7.50 |  9.00 | 10.50 | 10.77 |
 
 * Se interpreta así: Si yo mando 4000 Baja+2 y obtengo un Score de 6.00, es porque acerté 300. Si en cambio obtengo un score de 13.50 es porque acerté 500.
-* Conclusión principal: Si el efecto cuarentena puede hacer que algunas de las bajas sean inesperadas (es decir, se de de baja gente que seguramente tenga muy baja probabilidad), de los 859 no podemos aspirar a agarrar más que 600/650/700. Por lo tanto, ni si uno manda arriba de 10.000 bajas, ni aún agarrando a todos esos vamos a tener un score bueno. **El número de bajas que vamos a tener que mandar irá entre los 6.000 y los 9.000.**
+* Conclusión principal: Si el efecto cuarentena puede hacer que algunas de las bajas sean inesperadas (es decir, se de de baja gente que seguramente tenga muy baja probabilidad), de los 859 no podemos aspirar a agarrar más que 600/650/700. Por lo tanto, si uno manda arriba de 10.000 bajas, aún agarrando a todos esos vamos a tener un score malo. **El número de bajas que vamos a tener que mandar irá entre los 6.000 y los 9.000.**
 
 # FEATURE ENGINEERING DE CREACIÓN DE VARIABLES NO HISTÓRICAS
 
