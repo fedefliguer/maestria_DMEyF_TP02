@@ -1,3 +1,5 @@
+# ANÁLISIS PREVIO
+
 * Bajas+2 por mes: **no es parejo**. De 201901 a 201912 tiene entre 850 y 1100, mientras que en 202001 tiene 799, 202002 562, 202003 411.
 * En el mes de target, Mayo, hay 859 bajas. Por lo que se puede generar esta regla:
 
@@ -37,6 +39,10 @@
 | 19500 | -5.63 | -4.13 | -2.63 | -1.13 |  0.38 |  1.88 |  3.38 |  4.88 |  6.38 |  7.88 |  9.38 | 10.88 | 11.15 |
 | 20000 | -6.00 | -4.50 | -3.00 | -1.50 |  0.00 |  1.50 |  3.00 |  4.50 |  6.00 |  7.50 |  9.00 | 10.50 | 10.77 |
 
+* Se interpreta así: Si yo mando 4000 Baja+2 y obtengo un Score de 6.00, es porque acerté 300. Si en cambio obtengo un score de 13.50 es porque acerté 500.
+* Conclusión principal: Si el efecto cuarentena puede hacer que algunas de las bajas sean inesperadas (es decir, se de de baja gente que seguramente tenga muy baja probabilidad), de los 859 no podemos aspirar a agarrar más que 600/650/700. Por lo tanto, ni si uno manda arriba de 10.000 bajas, ni aún agarrando a todos esos vamos a tener un score bueno. **El número de bajas que vamos a tener que mandar irá entre los 6.000 y los 9.000.**
+
+# FEATURE ENGINEERING DE CREACIÓN DE VARIABLES NO HISTÓRICAS
 
 * Empiezo a trabajar con el método del fe_tester: cambio que hago en el dataset le aplico esa función, que me genera cuatro modelos: dos períodos (3meses -201910 a 201912- y 12meses -201901 a 201912-) X dos conjuntos de parámetros (C1 = num_iterations= 1265,learning_rate=  0.01020333,feature_fraction=  0.2333709,min_gain_to_split= 0.003569764,num_leaves=  417,lambda_l1= 4.553854,lambda_l2=  7.115316 y C2 = num_iterations= 1468, learning_rate= 0.01503084, feature_fraction= 0.2575957, min_gain_to_split= 0.01428075, num_leaves= 94, lambda_l1= 3.758696, lambda_l2= 0.341236). Evalúa la ganancia de ese modelo en enero y en febrero, y AUC y KS en enero + febrero.
 
@@ -317,6 +323,8 @@
 * Bajan todas las ganancias, aunque dos veces sube el AUC. ¿Las incluimos o no? Por ahora no sé.
 * Las mejores son mv_status01, mv_mpagospesos, mv_Finiciomora, mv_status05, mvr_mpagominimo.
 
+# BO INICIAL SIGUIENDO EL BORRADOR 
+
 * En este punto Denicolay subió el borrador de la linea de muerte trabajando sobre el dataset original (un 5% aleatorio de los no-baja), haciendo sólamente transformaciones de lags y con una BO de 10 iteraciones para el único parámetro pmin_data_in_leaf. Para analizar cómo vamos con estas transformaciones, pruebo esa optimización que mandó (bo_borrador_sin_FE.RDATA), y pruebo una igual pero con nuestras transformaciones (bo_borrador_con_FE_1par.RDATA). Se analiza la ganancia en Kaggle (leaderbord público) de ambos con diferentes puntos de corte (de 0.2 a 0.25). **POSTERIOR**: Lo que mandó él entrenaba con muchos períodos, yo me olvidé de cambiar el dataset así que entrenó desde 201901.
 
 <table>
@@ -443,7 +451,11 @@
 </tbody>
 </table>
 
-* Claramente no suma. Descartamos esto y volvemos a la creación de variables. Con las dos FE, ya tenemos nuestro conjunto de variables, por lo que podemos hacer el análisis marginal de incorporar históricas.
+* Claramente no suma. 
+
+# FEATURE ENGINEERING DE CREACIÓN DE VARIABLES HISTÓRICAS
+
+* Descartamos esto y volvemos a la creación de variables. Con las dos FE, ya tenemos nuestro conjunto de variables, por lo que podemos hacer el análisis marginal de incorporar históricas.
 * Empezamos probando el FE de él (lags y deltas) sobre el dataset que tenemos nosotros, y viendo el impacto como lo venimos haciendo.
 
 <table>
@@ -738,6 +750,10 @@
 4. 7000 me da 12.15
 5. 8000 me da 11.88
 
+# BO AVANZADA
+
+## BASELINE
+
 * Listo, ATR para nuestra BO? No! Recordemos la última BO que hicimos, bo_borrador_con_FE_3par.RDATA que dio 12.58 en el leaderbord público. Acá con una prueba de parámetros dio 12.73. Como quiero hacer un análisis siempre marginal, voy a tirar primero esa misma BO más chica (la llamo bo_borrador_con_FE_Historicas_3par.RDATA), igual a la que hicimos antes pero con este dataset enriquecido (y ya definitivo?). Sería nuestra baseline de la BO, y también nuestra baseline de los tiempos (tardó 2.30hs) para entender cuánto gano porque puede tardar un montón. Solo después de tener eso puedo extender el espacio de búsqueda.
 0. 4000 me da 12.31
 1. 5000 me da 12.16
@@ -748,3 +764,5 @@
 6. 8000 me da 12.63
 
 * Ahora sí. La BO que corramos tiene que crecer respecto de estos scores.
+
+
