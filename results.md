@@ -776,3 +776,15 @@
 4. 6500 me da 12.58472
 5. 7000 me da 12.93346
 6. 8000 me da 12.48722
+
+## B ampliada
+
+* BO con 5% pero ampliando el espacio de búsqueda
+
+0. 4000 me da 12.4609
+1. 5000 me da 13.0459
+2. 5500 me da 12.9784
+3. 6000 me da 12.7647
+4. 6500 me da 12.5509
+5. 7000 me da 12.6034
+6. 8000 me da 12.8059
