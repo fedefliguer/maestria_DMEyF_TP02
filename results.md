@@ -765,9 +765,9 @@
 
 * Ahora sí. La BO que corramos tiene que crecer respecto de estos scores.
 
-## BO - Anto
+## BO II
 
-* BO igual que antes pero usando 50% (en vez de 5%) de los registros negativos.
+* BO igual que antes (10 iteraciones, 3 parámetros, espacio reducido de búsqueda) pero usando 50% (en vez de 5%) de los registros negativos.
 
 0. 4000 me da 11.59474
 1. 5000 me da 12.04848
@@ -777,9 +777,9 @@
 5. 7000 me da 12.93346
 6. 8000 me da 12.48722
 
-## B ampliada
+## BO III
 
-* BO con 5% pero ampliando el espacio de búsqueda
+* BO con 5% de los negativos pero ampliando el espacio de búsqueda (optimizando más parámetros, 50 iteraciones)
 
 0. 4000 me da 12.4609
 1. 5000 me da 13.0459
