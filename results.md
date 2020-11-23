@@ -788,3 +788,26 @@
 4. 6500 me da 12.5509
 5. 7000 me da 12.6034
 6. 8000 me da 12.8059
+
+## BO IV
+
+* BO con 50% de los negativos pero ampliando el espacio de búsqueda del learning rate.
+
+0. 4000 me da 11.44474
+1. 5000 me da 11.86473
+2. 5500 me da 11.63599
+3. 6000 me da 12.61097
+4. 7000 me da 12.87346
+5. 8000 me da 12.60722
+
+## BO VI
+
+* BO con 70% de los negativos y ampliando el espacio de búsqueda de min_data_in_leaf.
+
+0. 4000 me da 11.75223
+1. 5000 me da 12.02973
+2. 5500 me da 12.44222
+3. 6000 me da 12.75721
+4. 6500 me da 12.86221
+5. 7000 me da 13.03846
+6. 8000 me da 12.79096
