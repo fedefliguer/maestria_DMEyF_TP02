@@ -811,3 +811,17 @@
 4. 6500 me da 12.86221
 5. 7000 me da 13.03846
 6. 8000 me da 12.79096
+
+
+## BO VII
+
+* BO igual que baseline pero incorporando los lambdas en la BO.
+
+0. 4000 me da 12.04098
+1. 5000 me da 12.47972
+2. 5500 me da 12.69346
+3. 6000 me da 12.74221
+4. 6500 me da 12.98596
+5. 7000 me da 12.96346
+6. 8000 me da 12.46847
+
