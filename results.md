@@ -825,3 +825,15 @@
 5. 7000 me da 12.96346
 6. 8000 me da 12.46847
 
+## BO VIII
+
+* BO igual que baseline pero sin entrenar con 201910.
+
+0. 4000 me da 12.04098
+1. 5000 me da 12.47972
+2. 5500 me da 12.69346
+3. 6000 me da 12.74221
+4. 6500 me da 12.98596
+5. 7000 me da 12.96346
+6. 8000 me da 12.46847
+
