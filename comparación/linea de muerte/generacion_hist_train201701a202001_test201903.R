@@ -41,4 +41,7 @@ for (i in 1:1000){
 }
 
 ganancias_lb_privado <- unlist(ganancias_lb_privado, use.names = FALSE)
-hist(ganancias_lb_privado)
+hist(ganancias_lb_privado, xaxt="n")
+axis(side=1, at=axTicks(1), 
+     labels=formatC(axTicks(1), format="d", big.mark=','))
+
