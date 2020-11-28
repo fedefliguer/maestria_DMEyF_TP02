@@ -35,6 +35,7 @@ for (i in 1:1000){       # 1000 ITERACIONES PARA COMPLETAR EL HISTOGRAMA
                              private_80pc[, ifelse( target==1,29250,-750)])   # Calculo ganancia en el privado
   
   ganancias_lb_privado = append(ganancias_lb_privado, ganancia_lb_priv) # Agrego a la lista de ganancias en el privado
+  print (i) # Para saber por dónde va
   i = i + 1
 }
 
