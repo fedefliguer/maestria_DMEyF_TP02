@@ -256,7 +256,7 @@ ds <- fread(karchivo_entrada_full, header=TRUE, sep=kcampos_separador)
 
 ds[ , clase01 :=  ifelse( clase_ternaria=="BAJA+2", 1L, 0L)  ]
 ds[ , clase_ternaria :=  NULL  ]
-ds = ds[foto_mes>=201701 , ]
+ds = ds[foto_mes>201712 , ]
 
 
 # Ensayo 1: Corrección de columnas que a priori son malas
@@ -331,9 +331,7 @@ if(!file.exists(karchivo_salida))
 #dejo fija la semilla, pero la podria llegar a cambiar y hacer loops anidados
 psemilla_undersampling <- 102191
 
-meses_validos <-  c(202003, 202002, 202001,
-                    201912, 201911, 201910, 201909, 201908, 201907, 201906, 201905, 201904, 201903, 201902, 201901,
-                    201812, 201811, 201810, 201809, 201808, 201807, 201806, 201805, 201804, 201803 )
+meses_validos <-  c(201905, 201908, 202001)
 
 #calculo la linea de muerte para varios meses
 for(  pmes_aplicacion in  meses_validos )
@@ -348,7 +346,7 @@ for(  pmes_aplicacion in  meses_validos )
   
   #defino el dataset donde voy a entrenar
   dataset[ ,  BO_train := 0L]
-  dataset[ ( foto_mes>=201701 & foto_mes<=vmes_last & foto_mes!=vmes_test & ( clase01==1 | azar<=0.05) ),  BO_train := 1L]
+  dataset[ ( foto_mes>201712 & foto_mes<=vmes_last & foto_mes!=vmes_test & ( clase01==1 | azar<=0.05) ),  BO_train := 1L]
   
   #dejo los datos en el formato que necesita LightGBM
   dBO_train  <- lgb.Dataset( data  = data.matrix(  dataset[ BO_train==1, campos_buenos, with=FALSE]),
