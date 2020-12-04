@@ -89,7 +89,7 @@ campos_buenos  <- setdiff(  colnames(dataset) ,  c("clase_ternaria","clase01","n
 set.seed(102191)
 dataset[ , azar:= runif( nrow(dataset) ) ]
 
-dataset[ ( foto_mes>=201701 & foto_mes<=201903 & ( clase01==1 | azar<=0.25) ),  BO_train1 := 1L]
+dataset[ ( foto_mes>=201701 & foto_mes<=201903 & ( clase01==1 | azar<=0.25) ),  BO_train := 1L]
 
 #Testeo en 201902, el mismo mes pero un año antes
 dataset[ foto_mes==201905,  BO_test1 := 1L]
@@ -99,7 +99,7 @@ start.time <- Sys.time()
 
 
 #dejo los datos en el formato que necesita LightGBM
-dBO_train1  <- lgb.Dataset( data  = data.matrix(  dataset[ BO_train1==1, campos_buenos, with=FALSE]),
+dBO_train  <- lgb.Dataset( data  = data.matrix(  dataset[ BO_train==1, campos_buenos, with=FALSE]),
                            label = dataset[ BO_train==1, clase01],
                            free_raw_data = TRUE
 )
@@ -132,7 +132,7 @@ fganancia_logistic_lightgbm   <- function(probs, data)
 
 estimar_lightgbm <- function( x )
 {
-  modelo <-  lgb.train(data= dBO_train1,
+  modelo <-  lgb.train(data= dBO_train,
                        objective= "binary",  #la clase es binaria
                        eval= fganancia_logistic_lightgbm,  #esta es la fuciona optimizar
                        valids= list( valid1= dBO_test1 ),
