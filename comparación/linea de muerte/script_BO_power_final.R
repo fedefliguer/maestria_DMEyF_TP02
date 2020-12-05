@@ -89,7 +89,7 @@ campos_buenos  <- setdiff(  colnames(dataset) ,  c("clase_ternaria","clase01","n
 set.seed(102191)
 dataset[ , azar:= runif( nrow(dataset) ) ]
 
-dataset[ ( foto_mes>=201701 & foto_mes<=201903 & ( clase01==1 | azar<=0.25) ),  BO_train := 1L]
+dataset[ ( foto_mes>=201701 & foto_mes<=201903 & foto_mes!=201905 & ( clase01==1 | azar<=0.25) ),  BO_train := 1L]
 
 #Testeo en 201902, el mismo mes pero un año antes
 dataset[ foto_mes==201905,  BO_test1 := 1L]
