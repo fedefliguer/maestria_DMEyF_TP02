@@ -6,7 +6,7 @@ gc()             #garbage collection
 
 # install.packages("primes")
 require("data.table")
-require("primes")
+#require("primes")
 require("lightgbm")
 require("DiceKriging")
 require("mlrMBO")
